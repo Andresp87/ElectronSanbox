@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <script src = "../src/server.js"></script>
+    <style type="text/css">
+      body{
+        background-image: url('../assets/fondo.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 400px;
+      }
+      .card-header{
+        text-align: center;
+        font-size: 3rem;
+        font-family: "Sofia", sans-serif;
+        color: white;
+        text-shadow: 5px 3px 3px black;
+      }
+      .card{
+        background-color: rgba(0, 0, 0, 0.0) !important;
+        --bs-card-border-color: none !important;
+        --bs-card-cap-bg: none !important;
+      }
+      .message{
+        text-align: center;
+        font-size: 2rem;
+        font-family: "Sofia", sans-serif;
+        color: white;
+        text-shadow: 5px 3px 3px black;        
+      }
+      .success{
+        text-shadow: 3px 3px 2px red;
+      }      
+      .fail{
+        text-shadow: 3px 3px 2px red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-4 align-items-center">
+      <div class="mt-3 d-grid gap-2 d-sm-flex justify-content-sm-end">
+        <button type="button" class="btn btn-sm btn-danger" id="closeBtn" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Cerrar"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="mt-4 align-items-center">
+        <div class="card" style="width: 100%;">
+          <div class="card-header">
+            ElectronPSP
+          </div>          
+          <div class="card-body" style="text-align: center !important;">
+            <button type="button" class="btn btn-lg btn-primary" id="loginGoogle">
+              <i class="bi bi-google"></i>
+              Login Google
+            </button>
+            <div class="visually-hidden" id="loading">
+              <div class="spinner-border text-warning" role="status">
+              </div>            
+              <p class="message">Esperando inicio de Sesión...</p>
+            </div>
+            <div class="visually-hidden" id="success_login">
+              <i class="bi bi-person-check text-white" style="background-color: green;font-size: 2rem;border-style: solid green;padding: 10px;border-radius: 15px;"></i>
+              <p class="message success">Inicio de Sesión Exitoso!</p>
+              <div id="spin_success" class="spinner-border text-success visually-hidden" role="status"></div>
+            </div>
+            <div class="visually-hidden mt-3" id="fail_login">
+              <i class="bi bi-person-x text-white" style="background-color: red;font-size: 2rem;border-style: solid red;padding: 10px;border-radius: 15px;"></i>
+              <p class="message fail">Inicio de Sesión Fallido!</p>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../src/js/login.js"></script>
+</html>
